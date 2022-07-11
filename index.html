@@ -10,21 +10,12 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 
 <body>
 
     <div class="top-bar">
         <h1>Where in the world?</h1>
-        <div class="top-right-light">
-            <i class="fa-solid fa-moon"></i>
-            <p>Dark mode</p>
-        </div>
-        <div class="top-right-dark">
-            <i class="fa-solid fa-sun"></i>
-            <p>light mode</p>
-        </div>
     </div>
 
     <div class="searchAndFilter">
@@ -33,29 +24,29 @@
             <input type="text" name="search" id="search" placeholder="Search for a country">
         </div>
         <div class="filter">
-            <select name="filter" id="filter" aria-placeholder="Filter by region">
-                <option value="" disabled selected>
-                    Filter by region
-                </option>
-                <option value="africa">
+            <div id="filter">
+                <div value="africa" onclick="getFilteredCountries('africa')">
                     Africa
-                </option>
-                <option value="africa">
-                    Africa
-                </option>
-                <option value="africa">
-                    Africa
-                </option>
-                <option value="africa">
-                    Africa
-                </option>
+                </div>
+                <div value="america" onclick="getFilteredCountries('america')">
+                    America
+                </div>
+                <div value="asia" onclick="getFilteredCountries('asia')">
+                    Asia
+                </div>
+                <div value="europe" onclick="getFilteredCountries('europe')">
+                    Europe
+                </div>
+                <div value="Oceania" onclick="getFilteredCountries('Oceania')">
+                    Oceania
+                </div>
 
-            </select>
+            </div>
         </div>
     </div>
 
     <div class="countries">
-        <div class="country">
+        <!-- <div class="country">
             <div class="flag">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/800px-Flag_of_Bangladesh.svg.png"
                     alt="flag">
@@ -66,10 +57,14 @@
                 <p>region : <span>asia</span></p>
                 <p>capital : <span>dhaka</span></p>
             </div>
-        </div>
+        </div> -->
+        <h1 id="loading">
+            Loading...
+        </h1>
     </div>
 
 
+    <script src="script.js"></script>
 
 </body>
 
