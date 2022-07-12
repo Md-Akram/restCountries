@@ -21,25 +21,31 @@
     <div class="searchAndFilter">
         <div class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" name="search" id="search" placeholder="Search for a country">
+
+            <input type="text" name="search" id="search" placeholder="Search for a country" onchange="search(value)">
+
         </div>
         <div class="filter">
-            <div id="filter">
-                <div value="africa" onclick="getFilteredCountries('africa')">
+            <div class="dropdown-header" onclick="dropdownToggler()">
+                <p>Filter by region</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="dropdown">
+                <p value="africa" onclick="getFilteredCountries('Africa')">
                     Africa
-                </div>
-                <div value="america" onclick="getFilteredCountries('america')">
+                </p>
+                <p value="america" onclick="getFilteredCountries('America')">
                     America
-                </div>
-                <div value="asia" onclick="getFilteredCountries('asia')">
+                </p>
+                <p value="asia" onclick="getFilteredCountries('Asia')">
                     Asia
-                </div>
-                <div value="europe" onclick="getFilteredCountries('europe')">
+                </p>
+                <p value="europe" onclick="getFilteredCountries('Europe')">
                     Europe
-                </div>
-                <div value="Oceania" onclick="getFilteredCountries('Oceania')">
+                </p>
+                <p value="Oceania" onclick="getFilteredCountries('Oceania')">
                     Oceania
-                </div>
+                </p>
 
             </div>
         </div>
@@ -61,6 +67,15 @@
         <h1 id="loading">
             Loading...
         </h1>
+    </div>
+
+    <div class="details">
+        <div class="back-button">
+            <i class="fa-solid fa-arrow-left-long"></i>
+            <p>Back</p>
+        </div>
+        <div class="flagAndDetails">
+        </div>
     </div>
 
 
